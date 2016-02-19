@@ -48,8 +48,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# gem 'rack-attack' # (prevent denial of service attacks)
-# gem 'secure_headers' # (security hardening)
+gem 'rack-attack' # (prevent denial of service attacks)
+gem 'secure_headers' # (security hardening)
 # gem 'oauth' # (for authenticating with Google or Facebook)
 # gem 'warden' # (authentication)
 # gem 'devise' # (authentication)

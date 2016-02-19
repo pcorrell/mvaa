@@ -1,0 +1,45 @@
+<%= form_for(@officer) do |f| %>
+  <% if @officer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@officer.errors.count, "error") %> prohibited this officer from being saved:</h2>
+
+      <ul>
+      <% @officer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :bod_position_id, 'Position' %><br>
+    <%= f.collection_select :bod_position_id, BodPosition.all, :id, :title, { prompt: 'Choose a Position', include_blank: true } %>
+  </div>
+  <div class="field">
+    <%= f.label :instrument_id %><br>
+    <%= f.collection_select :instrument_id, Instrument.all, :id, :name, { prompt: 'Choose an Instrument', include_blank: true } %>
+  </div>
+  <div class="field">
+    <%= f.label :major %><br>
+    <%= f.text_field :major %>
+  </div>
+  <div class="field">
+    <%= f.label :graduated %><br>
+    <%= f.number_field :graduated %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

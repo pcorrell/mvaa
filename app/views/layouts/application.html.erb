@@ -6,20 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Android</title>
+    <title>Marching Virginians Alumni Association</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <%= render 'shared/header' %>
-      <%= render 'shared/drawer' %>
-      <div class="android-content mdl-layout__content">
-        <%= yield %>
-        <%= render 'shared/footer' %>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>

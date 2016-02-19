@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Officers</h1>
+
+<table class="datatable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Position</th>
+      <th>Instrument</th>
+      <th>Major</th>
+      <th>Graduated</th>
+      <th>Bio</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @officers.each do |officer| %>
+      <tr>
+        <td><%= officer.name %></td>
+        <td><%= link_to officer.email, "mailto:#{officer.email}" %></td>
+        <td><%= officer.bod_position %></td>
+        <td><%= officer.instrument %></td>
+        <td><%= officer.major %></td>
+        <td><%= officer.graduated %></td>
+        <td><%= officer.bio %></td>
+        <td><%= link_to 'Show', officer %></td>
+        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
+        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Officer', new_officer_path %>

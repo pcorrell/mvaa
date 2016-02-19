@@ -11,12 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219014322) do
+ActiveRecord::Schema.define(version: 20160219040852) do
+
+  create_table "bod_positions", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "instruments", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "officers", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.integer  "instrument_id",   limit: 4
+    t.string   "position",        limit: 255
+    t.string   "major",           limit: 255
+    t.integer  "graduated",       limit: 4
+    t.text     "bio",             limit: 65535
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "bod_position_id", limit: 4
+    t.string   "email",           limit: 255
   end
 
 end

@@ -1,2 +1,6 @@
-@import 'material';
-@import 'styles';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import 'jquery-ui';
+@import 'dataTables/bootstrap/3/jquery.dataTables.bootstrap';
+@import 'scaffolds';

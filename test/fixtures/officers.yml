@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  instrument_id: 1
+  position: MyString
+  major: MyString
+  graduated: 1
+  bio: MyText
+
+two:
+  name: MyString
+  instrument_id: 1
+  position: MyString
+  major: MyString
+  graduated: 1
+  bio: MyText

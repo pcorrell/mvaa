@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bod Positions</h1>
+
+<table class="datatable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bod_positions.each do |bod_position| %>
+      <tr>
+        <td><%= bod_position.title %></td>
+        <td><%= link_to 'Show', bod_position %></td>
+        <td><%= link_to 'Edit', edit_bod_position_path(bod_position) %></td>
+        <td><%= link_to 'Destroy', bod_position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bod position', new_bod_position_path %>

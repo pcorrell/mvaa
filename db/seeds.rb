@@ -21,3 +21,22 @@ Instrument.where(name: 'Baritone').first_or_create
 Instrument.where(name: 'Twirler').first_or_create
 Instrument.where(name: 'Manager').first_or_create
 Instrument.where(name: 'Drum Major').first_or_create
+
+BODPosition.where(title: 'President').first_or_create
+BODPosition.where(title: 'President-Elect').first_or_create
+BODPosition.where(title: 'President Ex-Officio').first_or_create
+BODPosition.where(title: 'Secretary').first_or_create
+BODPosition.where(title: 'Treasurer').first_or_create
+BODPosition.where(title: 'Technology Officer').first_or_create
+BODPosition.where(title: 'Online Content Officer').first_or_create
+BODPosition.where(title: 'Kappa Kappa Psi Representative').first_or_create
+BODPosition.where(title: 'Tau Beta Sigma Representative').first_or_create
+BODPosition.where(title: 'Member-At-Large 1974-1979').first_or_create
+BODPosition.where(title: 'Member-At-Large 1980-1984').first_or_create
+BODPosition.where(title: 'Member-At-Large 1985-1989').first_or_create
+BODPosition.where(title: 'Member-At-Large 1990-1994').first_or_create
+BODPosition.where(title: 'Member-At-Large 1995-1999').first_or_create
+BODPosition.where(title: 'Member-At-Large 2000-2004').first_or_create
+BODPosition.where(title: 'Member-At-Large 2005-2009').first_or_create
+BODPosition.where(title: 'Member-At-Large 2010-2014').first_or_create
+BODPosition.where(title: 'Member-At-Large 2015-2019').first_or_create

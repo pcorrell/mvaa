@@ -22,10 +22,13 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'material_design_lite-sass'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -55,6 +58,7 @@ gem 'secure_headers' # (security hardening)
 # gem 'devise' # (authentication)
 # gem 'cancancan' # (authorization)
 
+gem 'binding_of_caller'
 gem 'better_errors'
 gem 'useragent' # (browser checking)
 gem 'nokogiri'

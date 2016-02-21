@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Board of Directors</h1>
+
+<% @officers.each do |officer| %>
+  <p>
+    <strong>Name:</strong>
+    <%= officer.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= link_to officer.email, "mailto:#{officer.email}" %>
+  </p>
+
+  <p>
+    <strong>Position:</strong>
+    <%= officer.bod_position %>
+  </p>
+
+  <p>
+    <strong>Instrument:</strong>
+    <%= officer.instrument %>
+  </p>
+
+  <p>
+    <strong>Major:</strong>
+    <%= officer.major %>
+  </p>
+
+  <p>
+    <strong>Graduated:</strong>
+    <%= officer.graduated %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= officer.bio %>
+  </p>
+  <hr/>
+<% end %>
+
+<br>

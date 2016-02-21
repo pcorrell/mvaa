@@ -1,0 +1,25 @@
+<div class="footer">
+  <div class="float-left contact">
+    Contact
+  </div>
+  <div class="float-middle social">
+    <a href="#">
+      <i class="fa fa-facebook-official social-icon"></i>
+    </a>
+    <a href="#">
+      <i class="fa fa-twitter social-icon"></i>
+    </a>
+    <a href="#">
+      <i class="fa fa-linkedin social-icon"></i>
+    </a>
+  </div>
+  <div class="float-right links">
+    <% if @links %>
+      <ul>Links
+        <% @links.each do |link| %>
+          <li><%= link_to link.title, link.url %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

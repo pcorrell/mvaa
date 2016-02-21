@@ -11,12 +11,62 @@ $darkest-color: #000;
 @import 'jquery-ui';
 @import 'dataTables/bootstrap/3/jquery.dataTables.bootstrap';
 @import 'datatables';
-@import 'scaffolds';
 
-.main_content {
+.main-content-small {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-content-large {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .right { width: 30%; float: right; }
+  .left { width: 65%; float: left; }
+}
+
+.footer {
+  width: 100%;
+  background-color: $primary-color;
+  min-height: 200px;
+  color: $lightest-color;
+  margin-top: 20px;
+
+  .contact {
+    width: 33%;
+    text-align: left;
+  }
+
+  .social {
+    width: 33%;
+    text-align: center;
+  }
+
+  .links {
+    width: 33%;
+    text-align: right;
+  }
+}
+
+.social-icon {
+  font-size: 3em;
+}
+
+.clear { clear: both; }
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-middle {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .no-icon {

@@ -61,6 +61,10 @@ class OfficersController < ApplicationController
     end
   end
 
+  def view
+    @officers = Officer.includes(:bod_position).order("bod_positions.display_order")
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_officer

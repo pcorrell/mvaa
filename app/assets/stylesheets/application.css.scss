@@ -1,6 +1,24 @@
+$primary-color: #597475;
+$secondary-color: adjust_hue($primary-color, 120);
+$tertiary-color: #5b9fa2;
+$neutral-color: lighten(desaturate($primary-color, 40), 40);
+$lightest-color: #FFF;
+$darkest-color: #000;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import 'jquery-ui';
 @import 'dataTables/bootstrap/3/jquery.dataTables.bootstrap';
+@import 'datatables';
 @import 'scaffolds';
+
+.main_content {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-icon {
+  content: none !important;
+}

@@ -13,6 +13,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= yield %>
+    <%= render 'shared/header' %>
+    <div class="main_content">
+      <%= yield %>
+    </div>
   </body>
 </html>

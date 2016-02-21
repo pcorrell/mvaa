@@ -4,7 +4,7 @@ class OfficersController < ApplicationController
   # GET /officers
   # GET /officers.json
   def index
-    @officers = Officer.all
+    @officers = Officer.includes(:bod_position).order("bod_positions.display_order")
   end
 
   # GET /officers/1

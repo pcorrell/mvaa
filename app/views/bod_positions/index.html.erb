@@ -2,19 +2,28 @@
 
 <h1>Listing Bod Positions</h1>
 
-<table class="datatable">
+<table class="data_table">
   <thead>
     <tr>
+      <th>Display Order</th>
       <th>Title</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input type='text' id='col1_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col2_filter' placeholder='filter' class='search_init'/></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </thead>
 
   <tbody>
     <% @bod_positions.each do |bod_position| %>
       <tr>
+        <td><%= bod_position.display_order %></td>
         <td><%= bod_position.title %></td>
         <td><%= link_to 'Show', bod_position %></td>
         <td><%= link_to 'Edit', edit_bod_position_path(bod_position) %></td>

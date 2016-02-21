@@ -1,41 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Officers</h1>
+<h1>Board of Directors</h1>
 
-<table class="datatable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Position</th>
-      <th>Instrument</th>
-      <th>Major</th>
-      <th>Graduated</th>
-      <th>Bio</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
+<% @officers.each do |officer| %>
+  <p>
+    <strong>Name:</strong>
+    <%= link_to officer.name, edit_officer_path(officer) %>
+  </p>
 
-  <tbody>
-    <% @officers.each do |officer| %>
-      <tr>
-        <td><%= officer.name %></td>
-        <td><%= link_to officer.email, "mailto:#{officer.email}" %></td>
-        <td><%= officer.bod_position %></td>
-        <td><%= officer.instrument %></td>
-        <td><%= officer.major %></td>
-        <td><%= officer.graduated %></td>
-        <td><%= officer.bio %></td>
-        <td><%= link_to 'Show', officer %></td>
-        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
-        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <p>
+    <strong>Email:</strong>
+    <%= link_to officer.email, "mailto:#{officer.email}" %>
+  </p>
 
-<br>
+  <p>
+    <strong>Position:</strong>
+    <%= officer.bod_position %>
+  </p>
+
+  <p>
+    <strong>Instrument:</strong>
+    <%= officer.instrument %>
+  </p>
+
+  <p>
+    <strong>Major:</strong>
+    <%= officer.major %>
+  </p>
+
+  <p>
+    <strong>Graduated:</strong>
+    <%= officer.graduated %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= officer.bio %>
+  </p>
+  <hr/>
+<% end %>
 
 <%= link_to 'New Officer', new_officer_path %>
+
+<br>

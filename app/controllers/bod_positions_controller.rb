@@ -69,6 +69,6 @@ class BodPositionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bod_position_params
-      params.require(:bod_position).permit(:title)
+      params.require(:bod_position).permit(:title, :display_order)
     end
 end

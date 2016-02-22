@@ -17,6 +17,7 @@ $darkest-color: #000;
 @import 'jquery-ui';
 @import 'dataTables/bootstrap/3/jquery.dataTables.bootstrap';
 @import 'datatables';
+@import 'pagination';
 
 .navbar {
 }
@@ -65,4 +66,7 @@ $darkest-color: #000;
 
 .btn-primary {
   background-color: $chicago-maroon;
+
+  &:hover { background-color: $burnt-orange; }
+  &:active { background-color: $dark-gray; }
 }

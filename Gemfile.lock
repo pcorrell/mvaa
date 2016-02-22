@@ -169,6 +169,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     useragent (0.16.3)
+    will_paginate (3.1.0)
 
 PLATFORMS
   ruby
@@ -195,3 +196,4 @@ DEPENDENCIES
   spring
   uglifier
   useragent
+  will_paginate

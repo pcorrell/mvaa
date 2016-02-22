@@ -26,6 +26,8 @@ gem 'jquery-ui-rails'
 gem 'jquery-datatables-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
+gem 'ckeditor'
+gem 'paperclip'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

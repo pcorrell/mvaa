@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :links
   resources :articles
   resources :bod_positions
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   get '/officers_view', to: 'officers#view', as: 'officers_view'
 
   # You can have the root of your site routed with "root"
-  root 'articles#view'
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

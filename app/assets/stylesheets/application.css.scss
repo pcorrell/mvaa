@@ -1,6 +1,12 @@
-$primary-color: #597475;
+$chicago-maroon: rgb(102, 0, 0);
+$burnt-orange: rgb(255, 102, 0);
+$dark-gray: rgb(100, 100, 100);
+$almost-black: rgb(51, 51, 51);
+$gray: rgb(194, 193, 186);
+
+$primary-color: $chicago-maroon;
 $secondary-color: adjust_hue($primary-color, 120);
-$tertiary-color: #5b9fa2;
+$tertiary-color: $burnt-orange;
 $neutral-color: lighten(desaturate($primary-color, 40), 40);
 $lightest-color: #FFF;
 $darkest-color: #000;
@@ -12,63 +18,51 @@ $darkest-color: #000;
 @import 'dataTables/bootstrap/3/jquery.dataTables.bootstrap';
 @import 'datatables';
 
-.main-content-small {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+.navbar {
 }
 
-.main-content-large {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+.container {
+  width: 70%;
+}
 
-  .right { width: 30%; float: right; }
-  .left { width: 65%; float: left; }
+.container-fluid {
+  width: 100%;
 }
 
 .footer {
-  width: 100%;
-  background-color: $primary-color;
+  background-color: $almost-black;
   min-height: 200px;
   color: $lightest-color;
   margin-top: 20px;
+}
 
-  .contact {
-    width: 33%;
-    text-align: left;
-  }
+.text-left {
+  text-align: left;
+}
 
-  .social {
-    width: 33%;
-    text-align: center;
-  }
+.text-right {
+  text-align: right;
+}
 
-  .links {
-    width: 33%;
-    text-align: right;
-  }
+.text-center {
+  text-align: center;
 }
 
 .social-icon {
   font-size: 3em;
 }
 
-.clear { clear: both; }
+.no-icon {
+  content: none !important;
+}
 
-.float-right {
+.article-footer {
+  font-size: .75em;
+  margin-top: 10px;
+  color: $gray;
   float: right;
 }
 
-.float-left {
-  float: left;
-}
-
-.float-middle {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.no-icon {
-  content: none !important;
+.btn-primary {
+  background-color: $chicago-maroon;
 }

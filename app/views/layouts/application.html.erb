@@ -14,7 +14,7 @@
   </head>
   <body>
     <%= render 'shared/header' %>
-    <div class="<%= content_for?(:content_layout) ? content_for(:content_layout) : 'main-content-small' %>">
+    <div class="<%= content_for?(:content_layout) ? content_for(:content_layout) : 'container' %>">
       <%= yield %>
     </div>
     <div class="clear"></div>

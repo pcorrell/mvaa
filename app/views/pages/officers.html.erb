@@ -1,42 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Board of Directors</h1>
+<h1>Board of Directors</h1><br/>
 
 <% @officers.each do |officer| %>
-  <p>
-    <strong>Name:</strong>
-    <%= officer.name %>
-  </p>
+  <div class="row">
+    <div class="col-sm-2">
+      <%= image_tag officer.avatar.url(:thumb) %>
+    </div>
+    <div class="col-sm-10">
+      <p>
+        <strong>Name:</strong>
+        <%= link_to officer.name, "mailto:#{officer.email}" %>
+      </p>
 
-  <p>
-    <strong>Email:</strong>
-    <%= link_to officer.email, "mailto:#{officer.email}" %>
-  </p>
+      <p>
+        <strong>Position:</strong>
+        <%= officer.bod_position %>
+      </p>
 
-  <p>
-    <strong>Position:</strong>
-    <%= officer.bod_position %>
-  </p>
+      <p>
+        <strong>Instrument:</strong>
+        <%= officer.instrument %>
+      </p>
 
-  <p>
-    <strong>Instrument:</strong>
-    <%= officer.instrument %>
-  </p>
+      <p>
+        <strong>Major:</strong>
+        <%= officer.major %>
+      </p>
 
-  <p>
-    <strong>Major:</strong>
-    <%= officer.major %>
-  </p>
+      <p>
+        <strong>Graduated:</strong>
+        <%= officer.graduated %>
+      </p>
 
-  <p>
-    <strong>Graduated:</strong>
-    <%= officer.graduated %>
-  </p>
-
-  <p>
-    <strong>Bio:</strong>
-    <%= get_html(officer.bio) %>
-  </p>
+      <%= get_html(officer.bio) %>
+    </div>
+  </div>
   <hr/>
 <% end %>
 

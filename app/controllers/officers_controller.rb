@@ -73,6 +73,6 @@ class OfficersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def officer_params
-      params.require(:officer).permit(:name, :instrument_id, :bod_position_id, :major, :graduated, :bio, :email)
+      params.require(:officer).permit(:name, :instrument_id, :bod_position_id, :major, :graduated, :bio, :email, :avatar)
     end
 end

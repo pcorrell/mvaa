@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224022914) do
+ActiveRecord::Schema.define(version: 20160225184346) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -80,16 +80,20 @@ ActiveRecord::Schema.define(version: 20160224022914) do
   end
 
   create_table "officers", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.integer  "instrument_id",   limit: 4
-    t.string   "position",        limit: 255
-    t.string   "major",           limit: 255
-    t.integer  "graduated",       limit: 4
-    t.text     "bio",             limit: 65535
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.integer  "bod_position_id", limit: 4
-    t.string   "email",           limit: 255
+    t.string   "name",                limit: 255
+    t.integer  "instrument_id",       limit: 4
+    t.string   "position",            limit: 255
+    t.string   "major",               limit: 255
+    t.integer  "graduated",           limit: 4
+    t.text     "bio",                 limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "bod_position_id",     limit: 4
+    t.string   "email",               limit: 255
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
   end
 
   create_table "states", force: :cascade do |t|

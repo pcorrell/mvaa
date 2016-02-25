@@ -35,5 +35,11 @@
   <%= get_html(@officer.bio) %>
 </p>
 
+<p>
+  <%= image_tag @officer.avatar.url %>
+  <%= image_tag @officer.avatar.url(:medium) %>
+  <%= image_tag @officer.avatar.url(:thumb) %>
+</p>
+
 <%= link_to 'Edit', edit_officer_path(@officer) %> |
 <%= link_to 'Back', officers_path %>

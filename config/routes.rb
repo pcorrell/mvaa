@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get '/about', to: 'pages#about', as: 'about'
-  get '/officers_view', to: 'officers#view', as: 'officers_view'
+  get '/officers_view', to: 'pages#officers', as: 'officers_view'
 
   # You can have the root of your site routed with "root"
   root 'pages#home'

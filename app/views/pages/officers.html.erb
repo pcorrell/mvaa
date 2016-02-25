@@ -4,10 +4,10 @@
 
 <% @officers.each do |officer| %>
   <div class="row">
-    <div class="col-sm-2">
-      <%= image_tag officer.avatar.url(:thumb) %>
+    <div class="col-sm-3">
+      <%= image_tag officer.avatar.url(:small) %>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-9">
       <p>
         <strong>Name:</strong>
         <%= link_to officer.name, "mailto:#{officer.email}" %>

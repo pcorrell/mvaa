@@ -1,0 +1,17 @@
+<%= form_for(@state) do |f| %>
+  <%= render partial: 'shared/errors', locals: { model: @state, model_name: 'state'} %>
+
+  <div class="form-group">
+    <%= f.label :abbreviation, class: 'control-label' %><br>
+    <%= f.text_field :abbreviation, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label' %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit nil,  {class: 'btn btn-default'} %>
+  </div>
+<% end %>

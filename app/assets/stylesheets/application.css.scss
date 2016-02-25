@@ -51,6 +51,22 @@ $darkest-color: #000;
 
 .social-icon {
   font-size: 3em;
+  margin: 10px;
+}
+
+.facebook {
+  color: $dark-gray;
+  &:hover { color: #3b5998; }
+}
+
+.twitter {
+  color: $dark-gray;
+  &:hover { color: #55acee; }
+}
+
+.linked-in {
+  color: $dark-gray;
+  &:hover { color: #0077b5; }
 }
 
 .no-icon {

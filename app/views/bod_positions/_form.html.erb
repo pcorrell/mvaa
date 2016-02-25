@@ -1,27 +1,17 @@
 <%= form_for(@bod_position) do |f| %>
-  <% if @bod_position.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bod_position.errors.count, "error") %> prohibited this bod_position from being saved:</h2>
+  <%= render partial: 'shared/errors', locals: { model: @bod_position, model_name: 'BOD Position'} %>
 
-      <ul>
-      <% @bod_position.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, class: 'control-label' %><br>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :display_order %><br>
-    <%= f.text_field :display_order %>
+  <div class="form-group">
+    <%= f.label :display_order, class: 'control-label' %><br>
+    <%= f.text_field :display_order, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil,  {class: 'btn btn-default'} %>
   </div>
 <% end %>

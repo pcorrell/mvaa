@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221155509) do
+ActiveRecord::Schema.define(version: 20160224022914) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -45,6 +45,27 @@ ActiveRecord::Schema.define(version: 20160221155509) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "contact_infos", force: :cascade do |t|
+    t.string   "first_name",    limit: 255
+    t.string   "last_name",     limit: 255
+    t.string   "maiden_name",   limit: 255
+    t.string   "address_line1", limit: 255
+    t.string   "address_line2", limit: 255
+    t.string   "city",          limit: 255
+    t.integer  "state_id",      limit: 4
+    t.string   "zip",           limit: 255
+    t.string   "phone_number",  limit: 255
+    t.string   "email",         limit: 255
+    t.boolean  "show_email"
+    t.integer  "class_year",    limit: 4
+    t.integer  "instrument_id", limit: 4
+    t.boolean  "is_mv"
+    t.boolean  "is_deleted"
+    t.boolean  "is_primary"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "instruments", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
@@ -69,6 +90,13 @@ ActiveRecord::Schema.define(version: 20160221155509) do
     t.datetime "updated_at",                    null: false
     t.integer  "bod_position_id", limit: 4
     t.string   "email",           limit: 255
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string   "abbreviation", limit: 255
+    t.string   "name",         limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

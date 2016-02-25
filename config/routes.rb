@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  resources :states
+  resources :contact_infos
   resources :links
   resources :articles
   resources :bod_positions

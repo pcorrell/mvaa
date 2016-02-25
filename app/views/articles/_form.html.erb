@@ -1,33 +1,27 @@
 <%= form_for(@article) do |f| %>
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+  <%= render partial: 'shared/errors', locals: { model: @article, model_name: 'article'} %>
 
-      <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
+  <div class="form-group">
+    <%= f.label :title, class: 'control-label' %><br>
     <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
+
+  <div class="form-group">
+    <%= f.label :body, class: 'control-label' %><br>
     <%= f.cktext_area :body, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
+
+  <div class="form-group">
+    <%= f.label :author, class: 'control-label' %><br>
     <%= f.text_field :author, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :posting_date %><br>
-    <%= f.datetime_select :posting_date, class: "form-control" %>
+
+  <div class="form-group">
+    <%= f.label :posting_date, class: 'control-label' %><br>
+    <%= f.datetime_select :posting_date, class: "datepicker" %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil,  {class: 'btn btn-default'} %>
   </div>
 <% end %>

@@ -4,7 +4,7 @@ class OfficersController < ApplicationController
   # GET /officers
   # GET /officers.json
   def index
-    @officers = Officer.includes(:bod_position).order("bod_positions.display_order")
+    @officers = Officer.includes(:office).order("offices.display_order")
   end
 
   # GET /officers/1
@@ -62,7 +62,7 @@ class OfficersController < ApplicationController
   end
 
   def view
-    @officers = Officer.includes(:bod_position).order("bod_positions.display_order")
+    @officers = Officer.includes(:office).order("offices.display_order")
   end
 
   private
@@ -73,6 +73,6 @@ class OfficersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def officer_params
-      params.require(:officer).permit(:name, :instrument_id, :bod_position_id, :major, :graduated, :bio, :email, :avatar)
+      params.require(:officer).permit(:contact_id, :office_id, :bio)
     end
 end

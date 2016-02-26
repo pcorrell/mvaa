@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Offices</h1>
+
+<table class="data_table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Display order</th>
+      <th>Email</th>
+      <th>Term Limit</th>
+      <th>Term Length</th>
+      <th class="no-icon"></th>
+      <th class="no-icon"></th>
+      <th class="no-icon"></th>
+    </tr>
+    <tr>
+      <td><input type='text' id='col1_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col2_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col3_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col4_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col5_filter' placeholder='filter' class='search_init'/></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @offices.each do |office| %>
+      <tr>
+        <td><%= office.title %></td>
+        <td><%= office.display_order %></td>
+        <td><%= office.email %></td>
+        <td><%= office.term_limit %></td>
+        <td><%= office.term_length %></td>
+        <td><%= link_to 'Show', office %></td>
+        <td><%= link_to 'Edit', edit_office_path(office) %></td>
+        <td><%= link_to 'Destroy', office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Office', new_office_path %>

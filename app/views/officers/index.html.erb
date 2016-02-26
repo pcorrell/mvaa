@@ -5,7 +5,7 @@
 <table class="data_table">
   <thead>
     <tr>
-      <th>Position</th>
+      <th>Office</th>
       <th>Name</th>
       <th class="no-icon"></th>
       <th class="no-icon"></th>
@@ -22,8 +22,8 @@
   <tbody>
     <% @officers.each do |officer| %>
       <tr>
+        <td><%= officer.office %></td>
         <td><%= officer.name %></td>
-        <td><%= officer.bod_position %></td>
         <td><%= link_to 'Show', officer %></td>
         <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
         <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

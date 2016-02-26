@@ -1,0 +1,32 @@
+<%= form_for(@office) do |f| %>
+  <%= render partial: 'shared/errors', locals: { model: @office, model_name: 'office'} %>
+
+  <div class="form-group">
+    <%= f.label :title, class: 'control-label' %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :display_order, class: 'control-label' %><br>
+    <%= f.number_field :display_order, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, class: 'control-label' %><br>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :term_limit, class: 'control-label' %><br>
+    <%= f.number_field :term_limit, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :term_length, class: 'control-label' %><br>
+    <%= f.number_field :term_length, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit nil,  {class: 'btn btn-default'} %>
+  </div>
+<% end %>

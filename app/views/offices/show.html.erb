@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @office.title %>
+</p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @office.display_order %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @office.email %>
+</p>
+
+<p>
+  <strong>Term Limit:</strong>
+  <%= @office.term_limit %>
+</p>
+
+<p>
+  <strong>Term length:</strong>
+  <%= @office.term_length %>
+</p>
+
+<%= link_to 'Edit', edit_office_path(@office) %> |
+<%= link_to 'Back', offices_path %>

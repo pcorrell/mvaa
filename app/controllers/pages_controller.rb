@@ -7,6 +7,6 @@ class PagesController < ApplicationController
   end
 
   def officers
-    @officers = Officer.includes(:bod_position).order("bod_positions.display_order")
+    @officers = Officer.includes(:office).order("offices.display_order")
   end
 end

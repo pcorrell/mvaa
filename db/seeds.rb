@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 Instrument.where(name: 'Clarinet').first_or_create
 Instrument.where(name: 'Piccolo').first_or_create
 Instrument.where(name: 'Trumpet').first_or_create
@@ -22,24 +15,24 @@ Instrument.where(name: 'Twirler').first_or_create
 Instrument.where(name: 'Manager').first_or_create
 Instrument.where(name: 'Drum Major').first_or_create
 
-BodPosition.where(title: 'President', display_order: 1).first_or_create
-BodPosition.where(title: 'President-Elect', display_order: 2).first_or_create
-BodPosition.where(title: 'President Ex-Officio', display_order: 3).first_or_create
-BodPosition.where(title: 'Secretary', display_order: 4).first_or_create
-BodPosition.where(title: 'Treasurer', display_order: 5).first_or_create
-BodPosition.where(title: 'Technology Officer', display_order: 6).first_or_create
-BodPosition.where(title: 'Online Content Officer', display_order: 7).first_or_create
-BodPosition.where(title: 'Kappa Kappa Psi Representative', display_order: 8).first_or_create
-BodPosition.where(title: 'Tau Beta Sigma Representative', display_order: 9).first_or_create
-BodPosition.where(title: 'Member-At-Large 1974-1979', display_order: 10).first_or_create
-BodPosition.where(title: 'Member-At-Large 1980-1984', display_order: 11).first_or_create
-BodPosition.where(title: 'Member-At-Large 1985-1989', display_order: 12).first_or_create
-BodPosition.where(title: 'Member-At-Large 1990-1994', display_order: 13).first_or_create
-BodPosition.where(title: 'Member-At-Large 1995-1999', display_order: 14).first_or_create
-BodPosition.where(title: 'Member-At-Large 2000-2004', display_order: 15).first_or_create
-BodPosition.where(title: 'Member-At-Large 2005-2009', display_order: 16).first_or_create
-BodPosition.where(title: 'Member-At-Large 2010-2014', display_order: 17).first_or_create
-BodPosition.where(title: 'Member-At-Large 2015-2019', display_order: 18).first_or_create
+Office.where(title: 'President',                      display_order: 1,   term_limit: 1, term_length: 2).first_or_create
+Office.where(title: 'President-Elect',                display_order: 2,   term_limit: 1, term_length: 2).first_or_create
+Office.where(title: 'President Ex-Officio',           display_order: 3,   term_limit: 1, term_length: 2).first_or_create
+Office.where(title: 'Secretary',                      display_order: 4,   term_limit: 2, term_length: 4).first_or_create
+Office.where(title: 'Treasurer',                      display_order: 5,   term_limit: 2, term_length: 4).first_or_create
+Office.where(title: 'Technology Officer',             display_order: 6,   term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Online Content Officer',         display_order: 7,   term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Kappa Kappa Psi Representative', display_order: 8,   term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Tau Beta Sigma Representative',  display_order: 9,   term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 1974-1979',      display_order: 10,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 1980-1984',      display_order: 11,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 1985-1989',      display_order: 12,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 1990-1994',      display_order: 13,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 1995-1999',      display_order: 14,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 2000-2004',      display_order: 15,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 2005-2009',      display_order: 16,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 2010-2014',      display_order: 17,  term_limit: 2, term_length: 3).first_or_create
+Office.where(title: 'Member-At-Large 2015-2019',      display_order: 18,  term_limit: 2, term_length: 3).first_or_create
 
 State.where(name: 'ALABAMA'.titleize, abbreviation: 'AL').first_or_create
 State.where(name: 'ALASKA'.titleize, abbreviation: 'AK').first_or_create

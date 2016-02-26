@@ -1,11 +1,8 @@
 class CreateOfficers < ActiveRecord::Migration
   def change
     create_table :officers do |t|
-      t.string :name
-      t.integer :instrument_id
-      t.string :position
-      t.string :major
-      t.integer :graduated
+      t.integer :contact_id
+      t.integer :office_id
       t.text :bio
 
       t.timestamps null: false

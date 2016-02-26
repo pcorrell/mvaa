@@ -1,6 +1,6 @@
 class Instrument < ActiveRecord::Base
   has_many :officers
-  has_many :contact_infos
+  has_many :contacts
 
   def to_s
     name

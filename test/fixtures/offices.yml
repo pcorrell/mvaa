@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  display_order: 1
+  email: MyString
+  number_of_terms: 1
+  term_length: 1
+
+two:
+  title: MyString
+  display_order: 1
+  email: MyString
+  number_of_terms: 1
+  term_length: 1

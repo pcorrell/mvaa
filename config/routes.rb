@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  resources :offices
   resources :states
-  resources :contact_infos
+  resources :contacts
   resources :links
   resources :articles
-  resources :bod_positions
   resources :officers
   resources :instruments
+
+  mount Ckeditor::Engine => '/ckeditor'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

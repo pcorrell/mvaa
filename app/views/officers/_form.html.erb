@@ -1,39 +1,14 @@
-<%= form_for(@officer, html: { multipart: true }) do |f| %>
+<%= form_for(@officer) do |f| %>
   <%= render partial: 'shared/errors', locals: { model: @officer, model_name: 'officer'} %>
 
   <div class="form-group">
-    <%= f.label :name, class: 'control-label' %><br>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.label :contact_id, 'Contact', class: 'control-label' %><br>
+    <%= f.collection_select :contact_id, Contact.order(last_name: :asc), :id, :name, { prompt: 'Choose a Contact', include_blank: true }, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :email, class: 'control-label' %><br>
-    <%= f.text_field :email, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :bod_position_id, 'Position', class: 'control-label' %><br>
-    <%= f.collection_select :bod_position_id, BodPosition.order(display_order: :asc), :id, :title, { prompt: 'Choose a Position', include_blank: true }, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :instrument_id, class: 'control-label' %><br>
-    <%= f.collection_select :instrument_id, Instrument.order(name: :asc), :id, :name, { prompt: 'Choose an Instrument', include_blank: true }, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :major, class: 'control-label' %><br>
-    <%= f.text_field :major, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :graduated, class: 'control-label' %><br>
-    <%= f.select :graduated, Time.now.year.downto(1872).map {|i| [i,i] }, {}, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :avatar, class: 'control-label' %><br>
-    <%= f.file_field :avatar, class: "form-control" %>
+    <%= f.label :office_id, 'Office', class: 'control-label' %><br>
+    <%= f.collection_select :office_id, Office.order(display_order: :asc), :id, :title, { prompt: 'Choose an Office', include_blank: true }, class: "form-control" %>
   </div>
 
   <div class="form-group">

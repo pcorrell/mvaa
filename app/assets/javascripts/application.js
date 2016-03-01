@@ -17,4 +17,6 @@
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require ckeditor/init
+//= require tag-it
+//= require articles
 //= require_tree .

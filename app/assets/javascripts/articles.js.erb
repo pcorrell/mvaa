@@ -1,0 +1,6 @@
+$(document).ready(function() {
+  var sampleTags = <%= ActsAsTaggableOn::Tag.all.map(&:name) %>;
+  $('#article_tags').tagit({
+    availableTags: sampleTags
+  });
+});

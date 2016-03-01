@@ -29,6 +29,7 @@ gem 'font-awesome-rails'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'will_paginate'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

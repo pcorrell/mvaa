@@ -11,4 +11,8 @@ class Contact < ActiveRecord::Base
     ret = ret + " (#{maiden_name})" unless maiden_name
     return ret + " #{last_name}"
   end
+
+  def is_officer?
+    !officer.blank?
+  end
 end

@@ -9,6 +9,8 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.all
     end
+    @articles = @articles.paginate(page: params[:page], per_page: 10).order(created_at: :desc)
+    @tags = Article.tag_counts_on(:tags)
   end
 
   # GET /articles/1

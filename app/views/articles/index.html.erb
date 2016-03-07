@@ -1,41 +1,36 @@
-<p id="notice"><%= notice %></p>
+<%= content_for :content_layout, 'container-fluid' %>
 
-<h1>Listing Articles</h1>
-
-<table class="data_table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Posting date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <td><input type='text' id='col1_filter' placeholder='filter' class='search_init'/></td>
-      <td><input type='text' id='col2_filter' placeholder='filter' class='search_init'/></td>
-      <td><input type='text' id='col3_filter' placeholder='filter' class='search_init'/></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
+  <div class="col-sm-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+      </div>
+      <div class="panel-body">
+        <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+          <%= link_to tag.name, { action: :index, tag: tag.name }, class: css_class %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10">
     <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.author %></td>
-        <td><%= article.posting_date %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= article.title %></h3>
+        </div>
+        <div class="panel-body">
+          <%= get_html(article.body) %>
+          <div class="article-footer">
+            Posted
+            <% if article.author %> by <%= article.author %><% end %>
+            <%= time_ago_in_words article.created_at %> ago
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+    <div class="flickr_pagination">
+      <%= will_paginate @articles %>
+    </div>
+  </div>
+</div>

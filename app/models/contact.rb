@@ -8,8 +8,8 @@ class Contact < ActiveRecord::Base
 
   def name
     ret = first_name
-    ret = ret + " (#{maiden_name})" unless maiden_name
-    return ret + " #{last_name}"
+    ret += " (#{maiden_name})" if !maiden_name.blank?
+    ret += " #{last_name}"
   end
 
   def is_officer?

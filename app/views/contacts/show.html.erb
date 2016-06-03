@@ -66,11 +66,11 @@
 </p>
 
 <p>
-  <strong>Avatar:</strong>
-  <%= image_tag @contact.avatar.url %>
-  <%= image_tag @contact.avatar.url(:medium) %>
-  <%= image_tag @contact.avatar.url(:small) %>
-  <%= image_tag @contact.avatar.url(:thumb) %>
+  <strong>Avatar:</strong><br/>
+  <%= image_tag @contact.avatar.url %><br/>
+  <%= image_tag @contact.avatar.url(:medium) %><br/>
+  <%= image_tag @contact.avatar.url(:small) %><br/>
+  <%= image_tag @contact.avatar.url(:thumb) %><br/>
 </p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |

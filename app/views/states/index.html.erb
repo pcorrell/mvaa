@@ -7,6 +7,7 @@
     <tr>
       <th>Abbreviation</th>
       <th>Name</th>
+      <th>Number of Alumni</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
     <tr>
       <td><input type='text' id='col1_filter' placeholder='filter' class='search_init'/></td>
       <td><input type='text' id='col2_filter' placeholder='filter' class='search_init'/></td>
+      <td><input type='text' id='col3_filter' placeholder='filter' class='search_init'/></td>
       <td></td>
       <td></td>
       <td></td>
@@ -25,6 +27,7 @@
       <tr>
         <td><%= state.abbreviation %></td>
         <td><%= state.name %></td>
+        <td><%= state.number_of_alumni %></td>
         <td><%= link_to 'Show', state %></td>
         <td><%= link_to 'Edit', edit_state_path(state) %></td>
         <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>

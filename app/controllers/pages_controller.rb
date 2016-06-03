@@ -9,4 +9,13 @@ class PagesController < ApplicationController
   def officers
     @officers = Officer.includes(:office).order("offices.display_order")
   end
+
+  def sot_award
+  end
+
+  def photos
+  end
+
+  def newsletters
+  end
 end

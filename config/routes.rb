@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about', as: 'about'
   get '/officers_view', to: 'pages#officers', as: 'officers_view'
+  get '/sot_award', to: 'pages#sot_award', as: 'sot_award'
+  get '/photos', to: 'pages#photos', as: 'photos'
+  get '/newsletters', to: 'pages#newsletters', as: 'newsletters'
 
   # You can have the root of your site routed with "root"
   root 'pages#home'

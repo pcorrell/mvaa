@@ -20,3 +20,7 @@
 //= require tag-it
 //= require articles
 //= require_tree .
+
+$(document).ready(function() {
+  $('.active').closest('.dropdown').addClass('active');
+});

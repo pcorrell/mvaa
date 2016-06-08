@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,22 +14,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'Home', root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Officers", officers_view_path %></li>
-        <li><%= link_to "Photos", photos_path %></li>
-        <li><%= link_to "Newsletters", newsletters_path %></li>
-        <li><%= link_to "SoT Award", sot_award_path %></li>
+        <li class="<%= cp(root_path) %>"><%= link_to 'Home', root_path %></li>
+        <li class="<%= cp(about_path) %>"><%= link_to "About", about_path %></li>
+        <li class="<%= cp(officers_view_path) %>"><%= link_to "Officers", officers_view_path %></li>
+        <li class="<%= cp(photos_path) %>"><%= link_to "Photos", photos_path %></li>
+        <li class="<%= cp(newsletters_path) %>"><%= link_to "Newsletters", newsletters_path %></li>
+        <li class="<%= cp(sot_award_path) %>"><%= link_to "SoT Award", sot_award_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Articles", articles_path %></li>
-            <li><%= link_to "Contacts", contacts_path %></li>
-            <li><%= link_to "Instruments", instruments_path %></li>
-            <li><%= link_to "Links", links_path %></li>
-            <li><%= link_to "Offices", offices_path %></li>
-            <li><%= link_to "Officers", officers_path %></li>
-            <li><%= link_to "States", states_path %></li>
+            <li class="<%= cp(articles_path) %>"><%= link_to "Articles", articles_path %></li>
+            <li class="<%= cp(contacts_path) %>"><%= link_to "Contacts", contacts_path %></li>
+            <li class="<%= cp(instruments_path) %>"><%= link_to "Instruments", instruments_path %></li>
+            <li class="<%= cp(links_path) %>"><%= link_to "Links", links_path %></li>
+            <li class="<%= cp(offices_path) %>"><%= link_to "Offices", offices_path %></li>
+            <li class="<%= cp(officers_path) %>"><%= link_to "Officers", officers_path %></li>
+            <li class="<%= cp(states_path) %>"><%= link_to "States", states_path %></li>
           </ul>
         </li>
       </ul>

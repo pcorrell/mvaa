@@ -9,6 +9,6 @@ module ApplicationHelper
   end
 
   def title(page_title)
-    content_for :title, "Marching Virginians Alumni Association (MVAA) - #{page_title.to_s}"
+    content_for :title, "MVAA - #{page_title.to_s}"
   end
 end
